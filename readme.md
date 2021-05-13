@@ -99,8 +99,8 @@ returns the data with a message
     }
     }
 
-If there's an error with the request, it returns only the error mesaage. E.gmail
-if the email is not specified in the req.body . It returns the following
+If there's an error with the request, it returns only the error mesaage. E.g
+If the email is not specified in the req.body . It returns the following
 
     {
         "message": "User validation failed: email: Email cannot be empty"
@@ -157,13 +157,12 @@ if the id is not a valid parameter it returns
 ```
 
 Delete a particular item with the specified Id
-Returns a status code of 204 if message was deleted succesfully.
+Returns a status code of 200 and a message if item was deleted succesfully.
 E.g
 
     http://URL/api/users/:id
 
-via the DELETE method will return a status code 200 and message stating
-stating data succesfully deleted
+via the DELETE method will return a status code 200 and a message.
 If the id does not exist in the database , it returns
 
     {
@@ -177,10 +176,10 @@ if the id is not a valid parameter it returns
 
     }
 
-### Error Handling
+### Handling Other Routes
 
 When you make a request to an unavailable route
-It returns a page not found message E.g
+It returns a page not found message with a 404 status code E.g
 
     GET http://URL/api/user
 
