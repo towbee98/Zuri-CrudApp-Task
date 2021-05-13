@@ -10,7 +10,8 @@ app.use("/api/users", router); //this middleware handles the specified routes
 app.get("/", (req, res) => {
   res.status(200).json({
     message:
-      "Welcome this is the Zuri Crud App Task for Nodejs Intern 🔥 🔥 🔥",
+      "Welcome this is the Zuri Crud App Task for Nodejs Intern 🔥 🔥 🔥. Here's the github link: 
+https://github.com/towbee98/Zuri-CrudApp-Task ",
   });
 });
 //Creates a route handler to handle all routes not defined in the above middleware
