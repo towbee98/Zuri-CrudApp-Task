@@ -89,7 +89,7 @@ exports.updateData = async (req, res) => {
       });
     }
     res.status(200).json({
-      message: "Data updated succesfully",
+      message: "Data updated succesfully  ",
       data,
     });
   } catch (err) {
