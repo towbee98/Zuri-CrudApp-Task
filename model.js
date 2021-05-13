@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
   },
   country: {
     type: String,
-    reuqired: [true, "Country cannot be empty "],
+    required: [true, "Country cannot be empty "],
   },
   createdAt: {
     type: Date,
