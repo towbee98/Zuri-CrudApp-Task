@@ -9,9 +9,9 @@ const router = require("./routes");
 app.use("/api/users", router); //this middleware handles the specified routes
 app.get("/", (req, res) => {
   res.status(200).json({
-    message:
-      "Welcome this is the Zuri Crud App Task for Nodejs Intern 🔥 🔥 🔥. Here's the github link: 
-https://github.com/towbee98/Zuri-CrudApp-Task ",
+    message: `Welcome this is the Zuri Crud App Task for Nodejs Intern 🔥 🔥 🔥. I made an error when
+      trying to submit. I submitted the hosted link instead of the github link.
+       Here's the github link : https://github.com/towbee98/Zuri-CrudApp-Task .I apologize for the inconvenience`,
   });
 });
 //Creates a route handler to handle all routes not defined in the above middleware
