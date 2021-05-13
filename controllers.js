@@ -10,8 +10,7 @@ exports.getAllData = async (req, res) => {
     });
   } catch (err) {
     res.status(400).json({
-      message: "fail",
-      error: err.messsage,
+      message: err.messsage,
     });
   }
 };
@@ -31,8 +30,7 @@ exports.createNewData = async (req, res) => {
     });
   } catch (err) {
     res.status(400).json({
-      message: "fail",
-      error: err.message,
+      message: err.message,
     });
   }
 };
