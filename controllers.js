@@ -3,7 +3,7 @@ const UserModel = require("./model");
 //get all existing data from the database
 exports.getAllData = async (req, res) => {
   try {
-    const data = await UserModel.find();
+    const data = await UserModel.find().select("-__v");
     res.status(200).json({
       message: "success",
       data,
@@ -18,7 +18,8 @@ exports.getAllData = async (req, res) => {
 //Posts a new data to the database
 exports.createNewData = async (req, res) => {
   try {
-    const data = await UserModel.create(req.body);
+    ({ name, email, country } = req.body);
+    const data = await UserModel.create({ name, email, country });
     if (!data) {
       return res.status(404).json({
         message: "Data not found",
@@ -38,7 +39,7 @@ exports.createNewData = async (req, res) => {
 //get a particular data
 exports.getData = async (req, res) => {
   try {
-    const data = await UserModel.findById(req.params.id);
+    const data = await UserModel.findById(req.params.id).select("-__v");
 
     if (!data) {
       return res.status(404).json({
@@ -81,7 +82,7 @@ exports.updateData = async (req, res) => {
     const data = await UserModel.findByIdAndUpdate(req.params.id, req.body, {
       runVaildators: true,
       new: true,
-    });
+    }).select("-__v");
     if (!data) {
       return res.status(404).json({
         message: "Data not found",
