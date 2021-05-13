@@ -1,8 +1,6 @@
 # Zuri Nodejs Crud App :rocket:
 
-## Hosted Link
-
-    https://zuri-crud-app-1.herokuapp.com
+### Hosted Link https://zuri-crud-app-1.herokuapp.com
 
 ## :satellite: :satellite:
 
